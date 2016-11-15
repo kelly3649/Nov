@@ -1,0 +1,56 @@
+#GO TO TEMPLATE INERITANCE
+AIM:Uniform Beauty
+D/N:
+a) What is a DEVLOG?
+ log of everything that 
+b) How does inheritance work?
+ parent & super class
+ children class (inherit few traits, branching out <- but all diff)
+ dont need to override all that's inherited, also doesnt need to be exact same
+ 
+- Suppose you are designing a multi-pg websote amd wamt all pgs to have a uniform look
+... and perhaps even dynamically generate content
+
+
+ - Jinja templating ++
+========================================================
+Jinja supports inheritance
+
+* a Jinja template may extend another
+
+In a super HTML file, specify sections that may be overriden (customized):
+
+in parent.html:
+---------------------------------------
+{% block name_of_block %
+<h3> No one expects the spanish inquisitions </h3>
+{% endblock %}
+----------------------------------------------------
+can have more than one block and name helps identify that block
+says child CAN inherit from parent
+
+-sub HTML filem first line must link to parent:
+    {% extends "parent.html" %}
+
+
+then match block name to override:
+==========================================================
+{% extends "parent.html" %}
+...
+{% block name_of_block %
+<h3> some other content </h3>
+{% endblock %}
+
+THINGS TO KNOW:
+* if a block exists in parent, it will be overwritten by child
+* a parent templ may contain empty blocks 
+eg {% block content_block %} {% endblock%}
+
+* blocks are nestable, inner block may b modified w/o modifying outer
+ 
+* to echo parent version of a block, user super()
+eg, 
+{% block foo %}
+   {{ super() }}
+...
+{% endblock %}

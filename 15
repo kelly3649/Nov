@@ -1,0 +1,86 @@
+AIM: Caleb Smith-Salzberg
+DN: Origins abt the origins of WWW?
+ - to facilitate data sharing
+ - it was difficult to facilitate experiments (would have to find all info physically) -> HTML (so a click would lead you to other info) 
+
+HTML did not orig have many tags (only headings and paragraphs)
+
+CSS -- Cascading Style Sheets
+- Created to separate presentation of an html/xml page from its content
+- one style for all pages
+
+Basic syntax:
+CSS PROPERTY: VALUE;
+
+eg,
+
+color: lightsteelblue
+text-align: center;
+border: 10px;
+
+3 ways to incorporate CSS into a page:
+inline (when you want to quickly add formatting to a page, not whole site),
+internal style sheet,
+external style sheet
+
+Inline
+-------------------------------------------
+Add CSS code to style attrib of a tag
+
+<TAG style = "CSS CODE">
+
+eg,
+
+<p style="color: green">...</p>
+<p style="color: green; font-size: 2em">...</p>
+
+some CSS units:
+-------------------------------------------
+pt: point = 1/72in
+px: pixel
+em: size, relative to base font size 
+( 2em --> twice current font size )
+
+Note: no space btwn # and its units
+
+Internal Style Sheet
+----------------------------------------------
+Add a <style> element to the <head> section of the page.
+Include all your CSS code inside the <style>...</style> block.
+
+Internal and External style sheets req the addition of a selector so that it is clear what element you are styling:
+
+SELECTOR {CSS CODE}
+
+eg,
+
+h1 {
+ color: #FF00FF;
+}
+
+External Style Sheet
+------------------------------------------
+Create a separate .css file that contains all your CSS code.
+It cannot contain any other kind of code (ie, no html or xml)
+
+Include a link to css file inside <head> section of your page
+
+eg,
+
+<head>
+ <link rel="stylesheet" type="text/css" href="STYLE FILE">
+ ...
+</head>
+
+rel: "relationship"
+type: format 
+href: location
+
+Styles will generally be inherited by elements inside other elements.
+
+eg, given
+
+body { color: green; }
+h1 { position: fixed; top: 10px; }
+
+--> h1 elements will be green

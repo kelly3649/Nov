@@ -1,0 +1,24 @@
+AIM: Caleb Smith-Salzberg
+DN: Origins abt the origins of WWW?
+ - to facilitate data sharing
+ - it was difficult to facilitate experiments (would have to find all info physically) -> HTML (so a click would lead you to other info) 
+
+HTML did not orig have many tags (only headings and paragraphs)
+
+CSS -- Cascading Style Sheets
+- Created to separate presentation of an html/xml page from its content
+- one style for all pages
+
+Basic syntax:
+CSS PROPERTY: VALUE;
+
+eg,
+
+color: lightsteelblue
+text-align: center;
+border: 10px;
+
+3 ways to incorporate CSS into a page:
+inline,
+internal style sheet,
+external style sheet
